@@ -1,0 +1,158 @@
+/* Global Rules */
+
+:root {
+  /* Primary Color*/
+  --primary-color-orange: #fb4c2e;
+  --primary-color-pink: #f3e0e2;
+  /* Neutral Color */
+
+  --neutral-Gray-bg: #e0e7ef;
+  --neutral-Gray-text: #b3b3b3;
+  --neutral-White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--primary-color-pink);
+  font-size: 16px;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  height: 100vh;
+}
+
+/* Layout Container */
+.container {
+  padding: 0;
+  margin: 0 auto;
+  background: var(--neutral-White);
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+/* Start Login*/
+
+.container {
+  display: flex;
+
+  flex-wrap: wrap;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.form-section {
+  min-width: 300px;
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+}
+.description-section {
+  min-width: 300px;
+  flex: 1;
+  padding: 1.5rem;
+  text-align: center;
+  background-color: #fb4c2e;
+  background-image: url("./images/abstract-background-from-brilliant-mosaic-pattern-generative-ai.jpg");
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  padding: 0.5em;
+}
+.description-section h1 {
+  color: white;
+}
+.social-icons i {
+  font-size: 1.5rem;
+  padding: 1em 0.25em;
+  cursor: pointer;
+}
+
+.social-icons a:first-child i {
+  color: blue;
+}
+.social-icons a:last-child i {
+  color: black;
+}
+.form-section p,
+form a,
+input {
+  padding: 1em;
+}
+
+input {
+  background-color: var(--neutral-Gray-bg);
+  color: var(--neutral-Gray-text);
+  border: none;
+
+  min-width: 100%;
+  flex: 1;
+}
+input:focus {
+  outline: none;
+}
+input:first-child {
+  margin-bottom: 0.75rem;
+}
+p,
+a {
+  color: var(--neutral-Gray-text);
+}
+button {
+  color: var(--neutral-Gray-text);
+  background-color: var(--primary-color-orange);
+  padding: 0.5em 2.5em;
+  border: none;
+  border-radius: 1.5rem;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .container {
+    max-width: 600px;
+    flex-direction: column-reverse;
+
+    top: 1.5rem;
+    transform: translateY(0%);
+    box-shadow: none;
+  }
+
+  body {
+    background-color: white;
+  }
+}
+/* End Login*/
